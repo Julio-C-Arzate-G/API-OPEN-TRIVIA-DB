@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>¿? Trivia ¿?</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style/styles.css" />
+  </head>
+  <body>
+    <div class="text-center">
+      <h1 class="display-3">OPEN TRIVIA DB</h1>
+    </div>
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <form action="/questions" id="form-questions">
+                <div class="form-group">
+                  <label for="total-questions">Questions (Min-5 Max-50) </label>
+                  <input
+                    type="number"
+                    min="5"
+                    max="50"
+                    step="5"
+                    class="form-control"
+                    id="total-questions"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="categories">Category</label>
+                  <select class="form-control" id="categories"></select>
+                </div>
+                <div class="form-group">
+                  <label for="difficulty">Difficulty</label>
+                  <select class="form-control" id="difficulty">
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="type">Type</label>
+                  <select class="form-control mb-5" id="type">
+                    <option value="multiple">Multiple choice</option>
+                    <option value="boolean">True / False</option>
+                  </select>
+                </div>
+                <button class="btn btn-outline-primary btn-block">
+                  GENERATE TRIVIA
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <form action="#" onsubmit="event.preventDefault()" id="check">
+        <!-- Questions -->
+        <div class="row" id="questions-container"></div>
+      </form>
+    </div>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>

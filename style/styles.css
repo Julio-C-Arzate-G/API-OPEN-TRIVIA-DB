@@ -1,0 +1,23 @@
+* {
+  background-color: #1b1b1b;
+  color: white;
+}
+body {
+  background-color: #1b1b1b;
+  color: white;
+}
+.form-control {
+  color: black;
+  background-color: #a4a4a4;
+}
+
+.card-body-question,
+.radio,
+.bc-black {
+  background-color: black;
+}
+
+.card-body,
+.card-body-question {
+  border-radius: 5px;
+}
